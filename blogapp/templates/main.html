@@ -7,7 +7,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet">
 
-    <title>BlogApp</title>
+    <title>BlogApp Test</title>
 </head>
 
 <body>
@@ -42,7 +42,7 @@
 <nav class = "navbar navbar-default navbar-fixed-top" role ="navigation">
     <ul class="nav navbar-nav">
         {% if user != None%}
-        <a class="navbar-brand" href="#">{{user.username}}</a>
+        <li><a class="navbar-brand" href="#">{{user.username}}</a></li>
         <li><a href="#" data-toggle="modal" data-target="#addblog">Add a Blog</a></li>
         {% endif %}
         <li><a href="#" data-toggle="modal" data-target="#login">Login</a></li>
