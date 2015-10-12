@@ -6,7 +6,7 @@ from django.contrib.auth import authenticate, login
 # Create your views here.
 
 def index(request):
-    blogs = BlogArticel.objects.all();
+    blogs = BlogArticle.objects.all();
     if request.method == 'POST':
         username = request.POST['username']
         pwd = request.POST["password"]
@@ -17,10 +17,10 @@ def index(request):
     return render(request, "main.html", {'blogs':blogs, 'user':None})
 
 def createBlog(request):
-    newBlog = BlogArticel();
+    newBlog = BlogArticle();
     newBlog.title = request.POST['title']
     newBlog.blog_content = request.POST['blog_content']
     newBlog.author = request.user
     newBlog.save()
-    blogs = BlogArticel.objects.all();
+    blogs = BlogArticle.objects.all();
     return render(request, "main.html", {'blogs':blogs, 'user':request.user})
