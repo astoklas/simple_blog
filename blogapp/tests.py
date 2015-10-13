@@ -6,7 +6,9 @@ class TestCase(TestCase):
         BlogArticle.objects.create(title="TitleA", blog_content="roar", user=None)
         BlogArticle.objects.create(title="TitleB", blog_content="meow", user=None)
 
-    def test_animals_can_speak(self):
+    def test_blogs(self):
+        blogs = BlogArticle.objects.all();
 
 
+    def get_user(self):
 # Create your tests here.
